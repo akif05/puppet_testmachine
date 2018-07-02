@@ -42,8 +42,10 @@
 #
 # Copyright 2018 Your name here, unless otherwise noted.
 #
+include apt
+
 class percona {
-  include percona::install
   include percona::config
+  include percona::install
   include percona::service
 }
