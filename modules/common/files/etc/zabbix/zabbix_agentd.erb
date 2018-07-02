@@ -1,0 +1,19 @@
+## This file is managed by puppet
+
+<% if @os['release']['major'] == 14 %>
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix/zabbix_agentd.log
+<% else %>
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix-agent/zabbix_agentd.log
+<% end -%>
+
+
+LogFileSize=50
+Server=172.16.250.200,172.16.250.231,172.16.250.232
+Hostname=<%= @fqdn %>
+
+<% if @hostname =~ /^recorder/ %>
+UserParameter=custom.recording_fs_stat,/bin/df -lkh | grep recording | sort -rk 5 | awk '{print$5}' | awk '{ split($0,a,"%"); if(a[1]<60) print 0; else print
+# 1; exit}'
+ <% end -%>
