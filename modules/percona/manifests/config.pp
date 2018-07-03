@@ -5,4 +5,9 @@ class percona::config {
     ensure  => 'file',
     content => epp('percona/percona-release.list.epp'),
    }
+
+   #  exec { 'apt-get update':
+   #path => ['/usr/bin/', '/usr/sbin/',],
+   #}
+
 }
