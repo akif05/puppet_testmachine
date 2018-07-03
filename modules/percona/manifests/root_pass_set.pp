@@ -1,3 +1,3 @@
-exec { 'mysqladmin -u root password "akif111"': 
+exec { 'mysqladmin -u root password "ak111"': 
   path => ['/usr/bin/, '/usr/sbin/',],
 }
