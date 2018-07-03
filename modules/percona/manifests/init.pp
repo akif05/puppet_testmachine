@@ -22,11 +22,6 @@ apt::source { 'percona-release':
 class percona {
 
   include percona::config
-
-  exec { 'apt-get update':
-    path => ['/usr/bin/', '/usr/sbin/',],
-  }
-  
   include percona::install
   include percona::service
 
