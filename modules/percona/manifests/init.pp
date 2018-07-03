@@ -43,7 +43,7 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 # https://repo.percona.com/apt/percona-release_0.1-6.wheezy_all.deb
 #
-#$root_pass = "serv\!\$ion"
+#$root_pass = "servision"
 
 include apt
 
@@ -72,7 +72,7 @@ class percona {
   #   path    => ['/usr/bin/', '/usr/sbin/',],
   # }
 
-  #exec { 'mysqladmin -u root -p"serv!$ion" password "newpassword"':
+  #exec { 'mysqladmin -u root -p"servision" password "newpassword"':
   #exec { 'mysqladmin -u root  password $root_pass"':
   #  path => ['/usr/bin/', '/usr/sbin/',],
   #}
