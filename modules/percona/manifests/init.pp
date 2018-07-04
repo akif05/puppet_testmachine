@@ -5,7 +5,7 @@ $root_pass = "servision"
 include apt
 
 apt::source { 'percona-release':
-    location => 'http://repo.percona.com/apt',
+    location => 'http://repo.percona.com/apt/',
     release  => 'percona-release_0.1-6.xenial_all.deb',
     #release  => '0.1-6.xenial_all.deb',
     repos    => 'main',
@@ -22,11 +22,6 @@ apt::source { 'percona-release':
 class percona {
 
   include percona::config
-
-  exec { 'apt-get update':
-    path => ['/usr/bin/', '/usr/sbin/',],
-  }
-  
   include percona::install
   include percona::service
 
