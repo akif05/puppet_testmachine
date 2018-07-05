@@ -1,9 +1,4 @@
 node /^percona-0[1-3]/ {
-  include percona
+  include percona1
 }
-
-#node 'aktest1.vision247.com' {
-#  include motd 
-#  include percona
-#}
 
