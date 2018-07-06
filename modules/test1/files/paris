@@ -1,0 +1,5 @@
+#Managed by puppet - do not edit
+# This is Paris ntp server
+server 192.168.1.1 iburst prefer
+server uk.pool.ntp.org
+driftfile /var/lib/ntp/drift

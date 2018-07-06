@@ -1,0 +1,16 @@
+##################################################################
+##################################################################
+#
+#        This file is managed by Puppet
+#
+##################################################################
+##################################################################
+
+##################################################################
+#
+#   This section replaces /etc/apt/sources.list.d/zabbix.list
+#
+##################################################################
+
+deb http://repo.zabbix.com/zabbix/<%= @version %>/<%= @operatingsystem.downcase %> <%= @lsbdistcodename %> main
+deb-src http://repo.zabbix.com/zabbix/<%= @version %>/<%= @operatingsystem.downcase %> <%= @lsbdistcodename %> main
