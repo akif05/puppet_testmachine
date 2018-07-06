@@ -1,7 +1,7 @@
 class percona::install {
-
+  
   package { 'percona-release':
-    ensure => '0.1-6.xenial',
+    ensure  => '0.1-6.xenial',
   }
   package { 'percona-server-client-5.7':
     ensure => '5.7.22-22-1.xenial',
